@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import print_function
 
-from src.gilded_rose import Item, GildedRose
+from application.gilded_rose import GildedRose
+from domain.item import Item
 
 if __name__ == "__main__":
     print("OMGHAI!")
