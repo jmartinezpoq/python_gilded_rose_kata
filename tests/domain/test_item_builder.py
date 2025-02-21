@@ -3,6 +3,7 @@ import unittest
 from domain.item_factory import ItemFactory
 from domain.items.aged_brie import AgedBrieItem
 from domain.items.backstage_pass import BackstagePassItem
+from domain.items.conjured import ConjuredItem
 from domain.items.legendary import LegendaryItem
 from domain.items.normal import NormalItem
 
@@ -27,6 +28,11 @@ class ItemBuilderTest(unittest.TestCase):
         item = ItemFactory.build("Sulfuras, Hand of Ragnaros", 1, 1)
 
         self.assertIsInstance(item, LegendaryItem)
+
+    def test_creates_conjured_item(self) -> None:
+        item = ItemFactory.build("Conjured", 1, 1)
+
+        self.assertIsInstance(item, ConjuredItem)
 
 
 if __name__ == "__main__":
